@@ -11,7 +11,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
 
 
-RUN sudo wget https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip && \
+RUN sudo wget https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip --no-check-certificate && \
     sudo unzip terraform_1.0.0_linux_amd64.zip && \
     sudo mv terraform /usr/bin && \
     sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
